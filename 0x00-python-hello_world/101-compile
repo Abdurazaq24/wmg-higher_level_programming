@@ -1,0 +1,11 @@
+#!/bin/bash
+
+python3 -c "
+import os
+import py_compile
+
+source = os.environ['PYFILE']
+output = source + 'c'
+
+py_compile.compile(source, cfile=output)
+"
